@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Core Plan — NYC Pitch</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0c0a14;
+    --glass: rgba(255,255,255,0.05);
+    --glass-border: rgba(255,255,255,0.08);
+    --text: #f4f0fb;
+    --text-2: #b0a8c0;
+    --text-3: #7a7189;
+    --blue: #7c8aff;
+    --blue-soft: rgba(124,138,255,0.12);
+    --green: #5de8b0;
+    --green-soft: rgba(93,232,176,0.1);
+    --red: #ff7a8a;
+    --red-soft: rgba(255,122,138,0.1);
+    --purple: #b07aff;
+    --purple-soft: rgba(176,122,255,0.1);
+    --meta: #5b9aff;
+    --google: #5ddea0;
+    --tiktok: #d8d5e0;
+    --asa: #b07aff;
+  }
+
+  .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal p, .reveal li, .reveal div, .reveal span {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+  }
+  .reveal .slides section { text-align: left; }
+  .reveal .slide-background { background: var(--bg) !important; }
+  section { color: var(--text); }
+
+  /* Typography */
+  .reveal h1 { font-size: 64px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; text-transform: none; text-align: left; margin-bottom: 12px; }
+  .reveal h2 { font-size: 48px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; text-transform: none; text-align: left; margin-bottom: 8px; }
+  .sub { font-size: 24px; color: var(--text-2); line-height: 1.5; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 14px; font-weight: 600; padding: 4px 14px;
+    border-radius: 100px; margin-bottom: 16px;
+    border: 1px solid var(--glass-border); background: var(--glass);
+  }
+  .pill-blue { background: var(--blue-soft); color: var(--blue); }
+  .pill-green { background: var(--green-soft); color: var(--green); }
+  .pill-red { background: var(--red-soft); color: var(--red); }
+  .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+
+  /* Glass cards */
+  .glass { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 14px; }
+
+  /* ── Slide 1 ── */
+  .s1-row { display: grid; grid-template-columns: 1fr 50px 1fr; gap: 20px; align-items: center; margin-top: 28px; }
+  .s1-panel { padding: 28px; }
+  .s1-label { font-size: 14px; color: var(--text-3); margin-bottom: 10px; }
+  .s1-val { font-family: 'JetBrains Mono', monospace; font-size: 48px; font-weight: 700; }
+  .s1-meta { font-size: 16px; color: var(--text-3); margin-top: 6px; }
+  .s1-conn { font-size: 52px; font-weight: 700; color: var(--blue); text-align: center; opacity: 0.5; }
+  .s1-hook { margin-top: 24px; padding: 16px 24px; border-radius: 10px; background: var(--glass); border: 1px solid var(--glass-border); font-size: 20px; color: var(--text-2); font-style: italic; }
+
+  /* ── Slide 2 ── */
+  .s2-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 32px; }
+  .s2-card { padding: 24px 16px; text-align: center; }
+  .s2-num { font-family: 'JetBrains Mono', monospace; font-size: 48px; font-weight: 700; }
+  .s2-desc { font-size: 16px; color: var(--text-2); margin-top: 6px; }
+  .s2-story { margin-top: 28px; font-size: 22px; color: var(--text-2); line-height: 1.6; border-left: 3px solid var(--blue); padding-left: 20px; }
+  .s2-story strong { color: var(--text); }
+
+  /* ── Slide 3 ── */
+  .s3-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 20px; }
+  .s3-card { padding: 20px; }
+  .s3-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; margin-bottom: 8px; }
+  .s3-title { font-size: 20px; font-weight: 600; margin-bottom: 6px; }
+  .s3-desc { font-size: 15px; color: var(--text-2); line-height: 1.4; }
+  .s3-mono { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-3); margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--glass-border); }
+  .s3-dash { margin-top: 16px; padding: 14px 20px; }
+  .s3-dash-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .s3-dash-t { font-size: 13px; color: var(--text-3); }
+  .s3-dash-live { font-size: 11px; font-weight: 600; color: var(--green); background: var(--green-soft); padding: 2px 8px; border-radius: 100px; }
+  .dr { display: grid; grid-template-columns: 90px 65px 50px 50px 65px 1fr; font-size: 14px; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.03); align-items: center; }
+  .dr.dh { color: var(--text-3); font-weight: 500; border-bottom-color: var(--glass-border); padding-bottom: 8px; margin-bottom: 4px; font-size: 13px; }
+  .cd { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 5px; }
+  .bm { height: 4px; border-radius: 4px; display: inline-block; }
+
+  /* ── Slide 4 ── */
+  .s4-nums { display: flex; justify-content: center; gap: 80px; align-items: flex-end; margin-top: 24px; }
+  .s4-big { font-family: 'JetBrains Mono', monospace; font-size: 84px; font-weight: 700; text-align: center; }
+  .s4-label { font-size: 18px; font-weight: 500; text-align: center; margin-top: 4px; }
+  .s4-strike { font-size: 16px; color: var(--text-3); text-align: center; margin-top: 4px; text-decoration: line-through; text-decoration-color: var(--red); text-decoration-thickness: 2px; }
+  .s4-chart { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 28px; }
+  .s4-col { text-align: center; }
+  .s4-col-t { font-size: 14px; font-weight: 600; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
+  .s4-bars { display: flex; align-items: flex-end; justify-content: center; gap: 24px; height: 120px; }
+  .s4-bw { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
+  .s4-b { width: 56px; border-radius: 6px 6px 0 0; }
+  .s4-bv { font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+  .s4-bn { font-size: 14px; font-weight: 500; margin-top: 4px; }
+  .s4-tag { margin-top: 8px; font-size: 14px; font-weight: 600; display: inline-block; padding: 3px 12px; border-radius: 100px; }
+  .s4-proof { margin-top: 20px; padding: 14px 20px; border-radius: 10px; background: var(--green-soft); border: 1px solid rgba(93,232,176,0.15); font-size: 20px; color: var(--green); font-weight: 500; }
+
+  /* ── Slide 5 ── */
+  .s5-row { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 24px; }
+  .s5-pc { padding: 28px; border: 2px solid rgba(93,232,176,0.25); }
+  .s5-pc-label { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--green); }
+  .s5-pc-big { font-family: 'JetBrains Mono', monospace; font-size: 42px; font-weight: 700; margin-top: 4px; }
+  .s5-pc-desc { font-size: 16px; color: var(--text-2); margin-top: 4px; }
+  .s5-div { border: none; border-top: 1px solid var(--glass-border); margin: 12px 0; }
+  .s5-list { list-style: none; padding: 0; margin: 0; }
+  .s5-list li { font-size: 15px; padding: 3px 0; color: var(--text-2); }
+  .s5-list li::before { content: '\2713\00a0'; color: var(--green); font-weight: 700; }
+  .s5-cmp { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--text-3); line-height: 1.8; margin-top: 10px; }
+  .s5-fc { padding: 28px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .s5-qr { width: 110px; height: 110px; border: 2px dashed rgba(255,255,255,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--text-3); background: rgba(0,0,0,0.3); }
+  .s5-url { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--blue); margin-top: 8px; }
+  .s5-badge { margin-top: 12px; padding: 6px 14px; border-radius: 100px; background: var(--green-soft); font-size: 14px; color: var(--green); font-weight: 500; }
+  .s5-social { margin-top: 10px; font-size: 14px; color: var(--text-3); }
+  .s5-social strong { color: var(--text-2); }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- 1. PROBLEM -->
+<section data-background-color="#0c0a14">
+  <span class="pill pill-red"><span class="dot" style="background:var(--red)"></span>The Problem</span>
+  <h1>76% of subscription apps<br>can't answer one question.</h1>
+  <p class="sub">"Which of my ads actually drives paying subscribers?"</p>
+  <div class="s1-row">
+    <div class="glass s1-panel">
+      <div class="s1-label">RevenueCat</div>
+      <div class="s1-val" style="color:var(--green)">$12K</div>
+      <div class="s1-meta">MRR &bull; 1,240 subscribers</div>
+    </div>
+    <div class="s1-conn">?</div>
+    <div class="glass s1-panel">
+      <div class="s1-label">Ad Dashboard</div>
+      <div class="s1-val" style="color:var(--meta)">4,000</div>
+      <div class="s1-meta">Installs &bull; $12,800 spent</div>
+    </div>
+  </div>
+  <div class="s1-hook">"Does this look familiar? RevenueCat in one tab, ad dashboard in another, gut feeling in between."</div>
+  <aside class="notes">
+    [PAUSE — let headline land]
+    76% from 21 interviews. Same story: "I know MRR. I know installs. I can't connect them."
+    [DIALOGUE:] "Does this look familiar?"
+    Your MMP gives you CPI. Every founder said CPI is the least important metric.
+  </aside>
+</section>
+
+<!-- 2. CREDIBILITY -->
+<section data-background-color="#0c0a14">
+  <span class="pill pill-blue"><span class="dot" style="background:var(--blue)"></span>Why Us</span>
+  <h1>We've been solving attribution<br>for 10 years.</h1>
+  <p class="sub">We didn't just spot the problem. We built the answer.</p>
+  <div class="s2-grid">
+    <div class="glass s2-card"><div class="s2-num" style="color:var(--green)">51</div><div class="s2-desc">teams on waitlist<br>in 1 week</div></div>
+    <div class="glass s2-card"><div class="s2-num" style="color:var(--blue)">300+</div><div class="s2-desc">apps on Airbridge</div></div>
+    <div class="glass s2-card"><div class="s2-num" style="color:var(--blue)">21</div><div class="s2-desc">teams interviewed Q1</div></div>
+    <div class="glass s2-card"><div class="s2-num" style="color:var(--green)">6</div><div class="s2-desc">teams in beta now</div></div>
+  </div>
+  <div class="s2-story">
+    Every team said: <strong>"I can see installs. I can see revenue. I can't connect them."</strong><br>
+    So we built Core Plan — subscription attribution from ad click to renewal.
+  </div>
+  <aside class="notes">
+    Airbridge: 10 years, 300+ apps. We launched the waitlist one week ago — 51 teams signed up in 7 days. That's how much demand there is for this.
+
+    21 subscription teams interviewed this quarter — same pain every time.
+    6 teams already in beta.
+
+    [DIALOGUE:] "Are you using RevenueCat or Adapty? That's a big part of how this works."
+  </aside>
+</section>
+
+<!-- 3. THREE STRENGTHS -->
+<section data-background-color="#0c0a14">
+  <span class="pill pill-green"><span class="dot" style="background:var(--green)"></span>What Makes Us Different</span>
+  <h2>Signal. Web+App. Full Funnel.</h2>
+  <p class="sub">Three things your current MMP can't do.</p>
+  <div class="s3-grid">
+    <div class="glass s3-card">
+      <div class="s3-icon" style="background:var(--blue-soft)">&#9889;</div>
+      <div class="s3-title">Signal Engineering</div>
+      <div class="s3-desc">Feed smarter data to ad platforms. Suppress fake trials, send only qualified conversions, inject predicted LTV — so Meta learns who actually pays.</div>
+      <div class="s3-mono">Delay &amp; Suppress &bull; Synthetic Events &bull; pLTV Injection</div>
+    </div>
+    <div class="glass s3-card">
+      <div class="s3-icon" style="background:var(--purple-soft)">&#127760;</div>
+      <div class="s3-title">Web + App Attribution</div>
+      <div class="s3-desc">One unified funnel across web and app. Full journey from browser to subscriber.</div>
+      <div class="s3-mono">Web SDK + App SDK &bull; Cross-platform</div>
+    </div>
+    <div class="glass s3-card">
+      <div class="s3-icon" style="background:var(--green-soft)">&#128200;</div>
+      <div class="s3-title">Full Funnel Tracking</div>
+      <div class="s3-desc">Ad Click &rarr; Install &rarr; Trial &rarr; Paid &rarr; Renewal. By channel, by creative.</div>
+      <div class="s3-mono">Meta &bull; Google &bull; TikTok &bull; ASA</div>
+    </div>
+  </div>
+  <div class="s3-dash glass">
+    <div class="s3-dash-head"><div class="s3-dash-t">Core Plan — Revenue Attribution</div><div class="s3-dash-live">LIVE</div></div>
+    <div class="dr dh"><span>Channel</span><span>Installs</span><span>Trial</span><span>Paid</span><span style="color:var(--green)">CPS</span><span style="color:var(--green)">LTV</span></div>
+    <div class="dr"><span><span class="cd" style="background:var(--meta)"></span>Meta</span><span class="mono" style="font-size:13px">2,140</span><span class="mono" style="font-size:13px">22%</span><span class="mono" style="font-size:13px">3.8%</span><span class="mono" style="font-size:13px;color:var(--green)">$383</span><span><span class="bm" style="width:70px;background:var(--green)"></span> <span class="mono" style="font-size:12px;color:var(--green)">$42</span></span></div>
+    <div class="dr"><span><span class="cd" style="background:var(--google)"></span>Google</span><span class="mono" style="font-size:13px">1,680</span><span class="mono" style="font-size:13px">18%</span><span class="mono" style="font-size:13px">4.2%</span><span class="mono" style="font-size:13px;color:var(--green)">$370</span><span><span class="bm" style="width:76px;background:var(--green)"></span> <span class="mono" style="font-size:12px;color:var(--green)">$45</span></span></div>
+    <div class="dr"><span><span class="cd" style="background:var(--tiktok)"></span>TikTok</span><span class="mono" style="font-size:13px">3,200</span><span class="mono" style="font-size:13px">15%</span><span class="mono" style="font-size:13px">2.8%</span><span class="mono" style="font-size:13px;color:var(--text-3)">$452</span><span><span class="bm" style="width:38px;background:var(--text-3)"></span> <span class="mono" style="font-size:12px;color:var(--text-3)">$28</span></span></div>
+    <div class="dr"><span><span class="cd" style="background:var(--asa)"></span>ASA</span><span class="mono" style="font-size:13px">980</span><span class="mono" style="font-size:13px">35%</span><span class="mono" style="font-size:13px">5.2%</span><span class="mono" style="font-size:13px;color:var(--green)">$247</span><span><span class="bm" style="width:90px;background:var(--purple)"></span> <span class="mono" style="font-size:12px;color:var(--purple)">$58</span></span></div>
+  </div>
+  <aside class="notes">
+    ONE — Signal Engineering. Think of it like prompts for ChatGPT — better signal in, better performance out.
+
+    Right now you're sending every "Start Trial" to Meta. Meta learns: "anyone who starts a trial is a good user." But 70% cancel within 24 hours. Meta is optimizing for people who cancel.
+
+    Signal Engineering fixes this three ways:
+    - Delay & Suppress: hold the trial event 24 hours. If they cancel, we never send it. Meta only learns from real users.
+    - Synthetic Events: instead of "Start Trial", send "qualified_trial" — only when they complete onboarding AND stay 3+ days.
+    - Predicted LTV: inject $45 estimated lifetime value into the event. Now Meta can do real value-based optimization.
+
+    Before: 1,000 trials, 50 paid (5%). After: 700 trials, 70 paid (10%). Same ad spend, double the conversion.
+
+    TWO — Web+App: one unified funnel across browser and app. Your MMP only sees app.
+
+    THREE — Full funnel: ad click to renewal, by channel, by creative.
+
+    [Dashboard] TikTok = most installs, worst CPS. ASA = fewest installs, best LTV.
+
+    [DIALOGUE:] "Right now, what event are you optimizing on in Meta? Start Trial? Purchase? That choice changes everything."
+  </aside>
+</section>
+
+<!-- 4. CPI TRAP -->
+<section data-background-color="#0c0a14">
+  <span class="pill pill-red"><span class="dot" style="background:var(--red)"></span>The Proof</span>
+  <h1>TikTok CPI: <span style="color:var(--tiktok)">$2</span>. Meta: <span style="color:var(--meta)">$3</span>.<br><span style="color:var(--green)">Meta is cheaper.</span></h1>
+  <div class="s4-nums">
+    <div><div class="s4-big" style="color:var(--tiktok)">$2</div><div class="s4-label" style="color:var(--tiktok)">TikTok CPI</div><div class="s4-strike">Cheaper?</div></div>
+    <div style="font-size:28px; color:var(--text-3); align-self:center;">vs</div>
+    <div><div class="s4-big" style="color:var(--meta)">$3</div><div class="s4-label" style="color:var(--meta)">Meta CPI</div></div>
+  </div>
+  <div class="s4-chart">
+    <div class="s4-col">
+      <div class="s4-col-t">Cost per Install</div>
+      <div class="s4-bars">
+        <div class="s4-bw"><div class="s4-bv" style="color:var(--tiktok)">$1.90</div><div class="s4-b" style="height:50px;background:var(--tiktok)"></div><div class="s4-bn" style="color:var(--tiktok)">TikTok</div></div>
+        <div class="s4-bw"><div class="s4-bv" style="color:var(--meta)">$3.20</div><div class="s4-b" style="height:80px;background:var(--meta)"></div><div class="s4-bn" style="color:var(--meta)">Meta</div></div>
+      </div>
+      <div class="s4-tag" style="background:var(--red-soft);color:var(--red)">TikTok looks cheaper</div>
+    </div>
+    <div class="s4-col">
+      <div class="s4-col-t">Cost per <strong style="color:var(--green)">Subscriber</strong></div>
+      <div class="s4-bars">
+        <div class="s4-bw"><div class="s4-bv" style="color:var(--red)">$452</div><div class="s4-b" style="height:120px;background:var(--red)"></div><div class="s4-bn" style="color:var(--tiktok)">TikTok</div></div>
+        <div class="s4-bw"><div class="s4-bv" style="color:var(--green)">$383</div><div class="s4-b" style="height:60px;background:var(--green)"></div><div class="s4-bn" style="color:var(--meta)">Meta</div></div>
+      </div>
+      <div class="s4-tag" style="background:var(--green-soft);color:var(--green)">Meta is 18% cheaper</div>
+    </div>
+  </div>
+  <div class="s4-proof">The bars flip. This is what Core Plan shows you — cost per subscriber, not cost per install.</div>
+  <aside class="notes">
+    TikTok $2 CPI, Meta $3. Every dashboard says scale TikTok.
+    But full funnel: TikTok $452/subscriber, Meta $383. Bars flip.
+    [DIALOGUE:] "Running TikTok? I see this in almost every subscription app."
+    Source: RevenueCat SOSA 2026, H&F.
+  </aside>
+</section>
+
+<!-- 5. CTA -->
+<section data-background-color="#0c0a14">
+  <span class="pill pill-green"><span class="dot" style="background:var(--green)"></span>Next Step</span>
+  <h1>Free to start. Docs at your desk<br><span style="color:var(--green)">tomorrow morning.</span></h1>
+  <div class="s5-row">
+    <div class="glass s5-pc">
+      <div class="s5-pc-label">Free to start</div>
+      <div class="s5-pc-big">15,000</div>
+      <div class="s5-pc-desc">attributed installs free</div>
+      <hr class="s5-div">
+      <div class="s5-pc-label">After that</div>
+      <div class="s5-pc-big">$0.05</div>
+      <div class="s5-pc-desc">per install &bull; Monthly &bull; Cancel anytime</div>
+      <hr class="s5-div">
+      <ul class="s5-list">
+        <li>Raw data export included</li>
+        <li>RevenueCat + Adapty native</li>
+        <li>Meta, Google, TikTok, ASA</li>
+      </ul>
+      <div class="s5-cmp">50K/mo &rarr; <span style="color:var(--green)">$2,500</span> &bull; 100K/mo &rarr; <span style="color:var(--green)">$5,000</span></div>
+    </div>
+    <div class="glass s5-fc">
+      <div class="pill pill-blue"><span class="dot" style="background:var(--blue)"></span>Limited Beta</div>
+      <div style="font-size:24px; font-weight:600; margin:8px 0 4px">Drop your email.</div>
+      <div style="font-size:18px; color:var(--text-2); margin-bottom:16px; line-height:1.5">Setup guide + category benchmark<br>in your inbox <strong style="color:var(--text)">tomorrow morning</strong>.</div>
+      <div class="s5-qr">QR &rarr; Google Form</div>
+      <div class="s5-url">forms.gle/xxxxx</div>
+      <div class="s5-badge">15K free &bull; First insight in a week</div>
+      <div class="s5-social"><strong>6 teams</strong> in beta &bull; H&amp;F, Photo, Productivity</div>
+    </div>
+  </div>
+  <aside class="notes">
+    15K free. $0.05/install after. Monthly, cancel anytime. No "contact sales."
+    [QR] Scan, drop email. Tomorrow: setup guide + benchmarks.
+    6 teams in beta. First insights within a week.
+    [CLOSING:] "I can show your category benchmarks on my phone — 30 seconds."
+  </aside>
+</section>
+
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  hash: true,
+  controls: true,
+  progress: true,
+  center: true,
+  transition: 'fade',
+  showNotes: false,
+  width: 1400,
+  height: 900,
+  margin: 0.08
+});
+</script>
+</body>
+</html>
