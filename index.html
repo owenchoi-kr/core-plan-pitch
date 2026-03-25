@@ -5,47 +5,57 @@
 <title>Core Plan — NYC Pitch</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0c0a14;
-    --glass: rgba(255,255,255,0.05);
-    --glass-border: rgba(255,255,255,0.08);
+    --glass: rgba(255,255,255,0.045);
+    --glass-border: rgba(255,255,255,0.07);
+    --glass-hover: rgba(255,255,255,0.08);
     --text: #f4f0fb;
     --text-2: #b0a8c0;
     --text-3: #7a7189;
     --blue: #7c8aff;
-    --blue-soft: rgba(124,138,255,0.12);
+    --blue-soft: rgba(124,138,255,0.1);
     --green: #5de8b0;
-    --green-soft: rgba(93,232,176,0.1);
+    --green-soft: rgba(93,232,176,0.08);
     --red: #ff7a8a;
-    --red-soft: rgba(255,122,138,0.1);
+    --red-soft: rgba(255,122,138,0.08);
     --purple: #b07aff;
-    --purple-soft: rgba(176,122,255,0.1);
+    --purple-soft: rgba(176,122,255,0.08);
     --meta: #5b9aff;
     --google: #5ddea0;
     --tiktok: #d8d5e0;
     --asa: #b07aff;
   }
-  .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal p, .reveal li, .reveal div, .reveal span {
-    font-family: 'DM Sans', -apple-system, sans-serif;
+  .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal p, .reveal div, .reveal span {
+    font-family: 'Outfit', -apple-system, sans-serif;
   }
+  .reveal li, .reveal aside { font-family: 'Rubik', -apple-system, sans-serif; }
   .reveal .slides section { text-align: left; }
   .reveal .slide-background { background: var(--bg) !important; }
   section { color: var(--text); }
-  .reveal h1 { font-size: 64px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; text-transform: none; text-align: left; margin-bottom: 12px; }
-  .sub { font-size: 24px; color: var(--text-2); line-height: 1.5; }
+
+  .reveal h1 { font-size: 60px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.18; text-transform: none; text-align: left; margin-bottom: 14px; }
+  .sub { font-size: 22px; font-family: 'Rubik', sans-serif; font-weight: 400; color: var(--text-2); line-height: 1.6; }
   .mono { font-family: 'JetBrains Mono', monospace; }
-  .pill { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; padding: 4px 14px; border-radius: 100px; margin-bottom: 16px; border: 1px solid var(--glass-border); background: var(--glass); }
-  .pill-blue { background: var(--blue-soft); color: var(--blue); }
-  .pill-green { background: var(--green-soft); color: var(--green); }
-  .pill-red { background: var(--red-soft); color: var(--red); }
-  .pill-purple { background: var(--purple-soft); color: var(--purple); }
+
+  .pill { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; font-family: 'Rubik', sans-serif; padding: 5px 14px; border-radius: 100px; margin-bottom: 18px; border: 1px solid var(--glass-border); background: var(--glass); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+  .pill-blue { background: var(--blue-soft); color: var(--blue); border-color: rgba(124,138,255,0.15); }
+  .pill-green { background: var(--green-soft); color: var(--green); border-color: rgba(93,232,176,0.15); }
+  .pill-red { background: var(--red-soft); color: var(--red); border-color: rgba(255,122,138,0.15); }
+  .pill-purple { background: var(--purple-soft); color: var(--purple); border-color: rgba(176,122,255,0.15); }
   .dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
-  .glass { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 14px; }
-  .source { font-size: 12px; color: var(--text-3); margin-top: 16px; }
-  .logo-row { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
-  .logo-item { font-size: 15px; font-weight: 600; color: var(--text-2); padding: 8px 18px; border-radius: 8px; background: var(--glass); border: 1px solid var(--glass-border); }
+
+  .glass { background: var(--glass); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--glass-border); border-radius: 16px; }
+  .source { font-size: 12px; font-family: 'Rubik', sans-serif; color: var(--text-3); margin-top: 18px; }
+  .logo-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .logo-item { font-size: 14px; font-weight: 500; font-family: 'Rubik', sans-serif; color: var(--text-2); padding: 8px 16px; border-radius: 10px; background: var(--glass); backdrop-filter: blur(8px); border: 1px solid var(--glass-border); }
+  .card-label { font-size: 13px; font-weight: 500; font-family: 'Rubik', sans-serif; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+  .card-title { font-size: 21px; font-weight: 600; margin-bottom: 8px; }
+  .card-desc { font-size: 15px; font-family: 'Rubik', sans-serif; color: var(--text-2); line-height: 1.55; }
+  .stat-big { font-family: 'JetBrains Mono', monospace; font-size: 40px; font-weight: 700; }
+  .stat-desc { font-size: 14px; font-family: 'Rubik', sans-serif; color: var(--text-2); margin-top: 6px; }
 </style>
 </head>
 <body>
@@ -54,110 +64,102 @@
 
 <!-- 1. CONTEXT -->
 <section data-background-color="#0c0a14">
-  <span class="pill pill-purple"><span class="dot" style="background:var(--purple)"></span>Context</span>
+  <span class="pill pill-purple"><span class="dot" style="background:var(--purple)"></span> Context</span>
   <h1>Easier to publish.<br>Harder to discover.</h1>
-  <p class="sub">AI has made building apps trivial. 2M+ new apps launched in 2025 alone.<br>The bottleneck isn't building anymore — it's getting found.<br><strong style="color:var(--text)">Paid UA is no longer optional. It's survival.</strong></p>
-  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; margin-top:36px;">
+  <p class="sub">AI made building apps trivial. 2M+ new apps in 2025 alone.<br>The bottleneck is discovery. <strong style="color:var(--text)">Paid UA is survival.</strong></p>
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-top:32px;">
     <div class="glass" style="padding:24px; text-align:center;">
-      <div class="mono" style="font-size:42px; font-weight:700; color:var(--purple);">2M+</div>
-      <div style="font-size:15px; color:var(--text-2); margin-top:6px;">new apps launched in 2025</div>
+      <div class="stat-big" style="color:var(--purple)">2M+</div>
+      <div class="stat-desc">new apps in 2025</div>
     </div>
     <div class="glass" style="padding:24px; text-align:center;">
-      <div class="mono" style="font-size:42px; font-weight:700; color:var(--red);">72%</div>
-      <div style="font-size:15px; color:var(--text-2); margin-top:6px;">of app installs come from paid ads</div>
+      <div class="stat-big" style="color:var(--red)">72%</div>
+      <div class="stat-desc">installs from paid ads</div>
     </div>
     <div class="glass" style="padding:24px; text-align:center;">
-      <div class="mono" style="font-size:42px; font-weight:700; color:var(--green);">$0</div>
-      <div style="font-size:15px; color:var(--text-2); margin-top:6px;">visibility without attribution</div>
+      <div class="stat-big" style="color:var(--green)">$0</div>
+      <div class="stat-desc">visibility without attribution</div>
     </div>
   </div>
   <div class="source">Sources: Statista App Market Report 2025, data.ai State of Mobile 2025</div>
   <aside class="notes">
-    Let me set the stage.
+    AI changed everything about building apps. Ship in weeks. Result: 2M new apps last year.
 
-    AI has changed everything about building apps. You can ship a product in weeks now. The result? 2 million new apps last year alone.
+    Building is easy. Getting found is hard. 72% of installs come from paid ads. UA isn't optional — it's survival.
 
-    Building is easy. Getting found? That's the hard part. 72% of app installs now come from paid ads. Paid UA isn't optional anymore — it's survival.
-
-    And if you're spending on ads, you need to know what's working. That's where we come in.
+    If you're spending on ads, you need to know what's working.
   </aside>
 </section>
 
 <!-- 2. PROBLEM -->
 <section data-background-color="#0c0a14">
-  <span class="pill pill-red"><span class="dot" style="background:var(--red)"></span>The Problem</span>
-  <h1>You're spending on ads.<br>But you can't see what's working.</h1>
-  <div style="display:grid; grid-template-columns:1fr 60px 1fr 60px 1fr; gap:12px; align-items:center; margin-top:36px;">
-    <div class="glass" style="padding:24px; text-align:center;">
-      <div style="font-size:14px; color:var(--text-3); margin-bottom:8px;">AD PLATFORMS</div>
-      <div style="font-size:18px; font-weight:600;">Meta Ads<br>Google Ads<br>TikTok Ads</div>
+  <span class="pill pill-red"><span class="dot" style="background:var(--red)"></span> The Problem</span>
+  <h1>You're spending on ads.<br>But can't see what's working.</h1>
+  <div style="display:grid; grid-template-columns:1fr 48px 1fr 48px 1fr; gap:10px; align-items:center; margin-top:32px;">
+    <div class="glass" style="padding:22px; text-align:center;">
+      <div class="card-label" style="color:var(--text-3);">Ad Platforms</div>
+      <div style="font-size:17px; font-weight:600;">Meta Ads<br>Google Ads<br>TikTok Ads</div>
       <div style="font-size:13px; color:var(--text-3); margin-top:8px;">Installs, CPI, Spend</div>
     </div>
-    <div style="text-align:center; font-size:28px; color:var(--text-3);">&rarr;</div>
-    <div class="glass" style="padding:24px; text-align:center; border-color:rgba(255,122,138,0.3);">
-      <div style="font-size:14px; color:var(--red); margin-bottom:8px;">THE GAP</div>
-      <div style="font-size:36px; font-weight:700; color:var(--red);">?</div>
+    <div style="text-align:center; font-size:24px; color:var(--text-3);">&rarr;</div>
+    <div class="glass" style="padding:22px; text-align:center; border-color:rgba(255,122,138,0.2);">
+      <div class="card-label" style="color:var(--red);">The Gap</div>
+      <div style="font-size:32px; font-weight:700; color:var(--red);">?</div>
       <div style="font-size:13px; color:var(--text-3); margin-top:8px;">No connection between<br>ad spend &amp; revenue</div>
     </div>
-    <div style="text-align:center; font-size:28px; color:var(--text-3);">&rarr;</div>
-    <div class="glass" style="padding:24px; text-align:center;">
-      <div style="font-size:14px; color:var(--text-3); margin-bottom:8px;">REVENUE</div>
-      <div style="font-size:18px; font-weight:600;">RevenueCat<br>Adapty<br>Superwall</div>
+    <div style="text-align:center; font-size:24px; color:var(--text-3);">&rarr;</div>
+    <div class="glass" style="padding:22px; text-align:center;">
+      <div class="card-label" style="color:var(--text-3);">Revenue</div>
+      <div style="font-size:17px; font-weight:600;">RevenueCat<br>Adapty<br>Superwall</div>
       <div style="font-size:13px; color:var(--text-3); margin-top:8px;">MRR, Trials, Churn</div>
     </div>
   </div>
-  <div style="margin-top:24px; padding:14px 20px; border-radius:10px; background:var(--glass); border:1px solid var(--glass-border); font-size:18px; color:var(--text-2); font-style:italic;">
+  <div style="margin-top:20px; padding:14px 20px; border-radius:12px; background:var(--glass); backdrop-filter:blur(8px); border:1px solid var(--glass-border); font-size:17px; font-family:'Rubik',sans-serif; color:var(--text-2); font-style:italic;">
     "Which of my ads actually drives paying subscribers?" — 21 subscription app teams, same question.
   </div>
   <div class="source">Source: Airbridge ICP Research, 21 subscription app team interviews, Q1 2026</div>
   <aside class="notes">
-    Here's the problem every subscription app team faces.
+    Left: ad platforms — installs, CPI, spend. Right: revenue tools — MRR, trials, churn.
 
-    Left: your ad platforms. You know installs, CPI, spend. Right: your revenue tools — RevenueCat, Adapty, Superwall. You know MRR, trials, churn.
+    The gap: nobody can connect them. "Which ad drove that subscriber?" — nobody knows.
 
-    The gap in the middle? Nobody can connect them. "Which ad drove that subscriber?" — nobody knows.
-
-    We interviewed 21 subscription app teams this quarter. Every single one asked the same question.
+    21 teams interviewed. Every one asked the same question.
 
     [DIALOGUE:] "Does this look familiar?"
   </aside>
 </section>
 
-<!-- 3. WHY US (merged with AI-Native) -->
+<!-- 3. WHY AIRBRIDGE -->
 <section data-background-color="#0c0a14">
-  <span class="pill pill-blue"><span class="dot" style="background:var(--blue)"></span>Why Airbridge</span>
+  <span class="pill pill-blue"><span class="dot" style="background:var(--blue)"></span> Why Airbridge</span>
   <h1>10 years of attribution.<br>Now, <span style="color:var(--green)">AI-native.</span></h1>
   <p class="sub">Certified by the platforms you already use.</p>
-  <div class="logo-row" style="margin-top:28px;">
+  <div class="logo-row" style="margin-top:24px;">
     <div class="logo-item">Meta Ads</div>
     <div class="logo-item">Google Ads</div>
     <div class="logo-item">Apple Search Ads</div>
     <div class="logo-item">TikTok Ads</div>
-    <div class="logo-item" style="border-color:rgba(93,232,176,0.2); color:var(--green);">RevenueCat</div>
-    <div class="logo-item" style="border-color:rgba(93,232,176,0.2); color:var(--green);">Adapty</div>
-    <div class="logo-item" style="border-color:rgba(93,232,176,0.2); color:var(--green);">Superwall</div>
+    <div class="logo-item" style="border-color:rgba(93,232,176,0.15); color:var(--green);">RevenueCat</div>
+    <div class="logo-item" style="border-color:rgba(93,232,176,0.15); color:var(--green);">Adapty</div>
+    <div class="logo-item" style="border-color:rgba(93,232,176,0.15); color:var(--green);">Superwall</div>
   </div>
-  <div style="display:grid; grid-template-columns:1fr 60px 1fr; gap:20px; align-items:center; margin-top:28px;">
-    <div class="glass" style="padding:24px; border-color:rgba(255,122,138,0.2);">
-      <div style="font-size:14px; color:var(--red); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px;">Other MMPs</div>
-      <div class="mono" style="font-size:42px; font-weight:700; color:var(--red);">3 mo</div>
-      <div style="font-size:15px; color:var(--text-3); margin-top:8px;">40-page guide &bull; 2 engineers &bull; ticket queue</div>
+  <div style="display:grid; grid-template-columns:1fr 48px 1fr; gap:16px; align-items:center; margin-top:24px;">
+    <div class="glass" style="padding:24px; border-color:rgba(255,122,138,0.15);">
+      <div class="card-label" style="color:var(--red);">Other MMPs</div>
+      <div class="stat-big" style="color:var(--red)">3 mo</div>
+      <div style="font-size:14px; font-family:'Rubik',sans-serif; color:var(--text-3); margin-top:8px;">40-page guide · 2 engineers · ticket queue</div>
     </div>
-    <div style="font-size:28px; text-align:center; color:var(--text-3);">&rarr;</div>
-    <div class="glass" style="padding:24px; border-color:rgba(93,232,176,0.2);">
-      <div style="font-size:14px; color:var(--green); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px;">Airbridge Core Plan</div>
-      <div class="mono" style="font-size:42px; font-weight:700; color:var(--green);">1 hr</div>
-      <div style="font-size:15px; color:var(--text-2); margin-top:8px;">Airbridge AI &bull; MCP for your IDE &bull; no engineer needed</div>
+    <div style="font-size:24px; text-align:center; color:var(--text-3);">&rarr;</div>
+    <div class="glass" style="padding:24px; border-color:rgba(93,232,176,0.15);">
+      <div class="card-label" style="color:var(--green);">Airbridge Core Plan</div>
+      <div class="stat-big" style="color:var(--green)">1 hr</div>
+      <div style="font-size:14px; font-family:'Rubik',sans-serif; color:var(--text-2); margin-top:8px;">Airbridge AI · MCP for your IDE · no engineer needed</div>
     </div>
   </div>
   <aside class="notes">
-    Airbridge has been in mobile attribution for 10 years. Certified by Meta, Google, Apple, TikTok. Native integrations with RevenueCat, Adapty, and Superwall.
+    10 years. Certified by Meta, Google, Apple, TikTok. Native: RevenueCat, Adapty, Superwall.
 
-    But here's what's new: we built AI into every step.
-
-    Other MMPs: 3 months to set up. 40-page guide, 2 engineers, support ticket queue.
-
-    Core Plan: 1 hour. Airbridge AI answers any question in plain English. MCP plugs into your IDE — SDK install becomes a conversation. No engineer needed.
+    What's new: AI in every step. Other MMPs: 3 months. Core Plan: 1 hour. AI answers questions, MCP handles SDK install.
 
     [DIALOGUE:] "How long did it take to set up your current MMP?"
   </aside>
@@ -165,130 +167,122 @@
 
 <!-- 4. DIFFERENTIATORS -->
 <section data-background-color="#0c0a14">
-  <span class="pill pill-green"><span class="dot" style="background:var(--green)"></span>What Makes Us Different</span>
+  <span class="pill pill-green"><span class="dot" style="background:var(--green)"></span> What Makes Us Different</span>
   <h1>Built for subscription apps.<br>From the ground up.</h1>
-  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; margin-top:32px;">
-    <div class="glass" style="padding:28px;">
-      <div style="font-size:22px; font-weight:600; margin-bottom:10px; color:var(--green);">Signal Engineering</div>
-      <div style="font-size:16px; color:var(--text-2); line-height:1.6;">Verified subscription signals — suppress fake trials, send only qualified conversions, inject predicted LTV. Your ad platform learns who actually pays.</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-top:32px;">
+    <div class="glass" style="padding:24px;">
+      <div class="card-title" style="color:var(--green);">Signal Engineering</div>
+      <div class="card-desc">Verified subscription signals — suppress fake trials, send only qualified conversions, inject predicted LTV.</div>
     </div>
-    <div class="glass" style="padding:28px;">
-      <div style="font-size:22px; font-weight:600; margin-bottom:10px; color:var(--blue);">Web + App Attribution</div>
-      <div style="font-size:16px; color:var(--text-2); line-height:1.6;">Users start on web, convert in app. We see the full journey. Your current MMP only sees the app side.</div>
+    <div class="glass" style="padding:24px;">
+      <div class="card-title" style="color:var(--blue);">Web + App Attribution</div>
+      <div class="card-desc">Users start on web, convert in app. We see the full journey across both.</div>
+    </div>
+    <div class="glass" style="padding:24px;">
+      <div class="card-title" style="color:var(--purple);">Funnel Report</div>
+      <div class="card-desc">Dedicated report — install &rarr; trial &rarr; subscribe &rarr; renewal, by channel.</div>
     </div>
   </div>
-    <div class="glass" style="padding:28px;">
-      <div style="font-size:22px; font-weight:600; margin-bottom:10px; color:var(--purple);">Funnel Report</div>
-      <div style="font-size:16px; color:var(--text-2); line-height:1.6;">Other MMPs track events. We give you a dedicated report — install &rarr; trial &rarr; subscribe &rarr; renewal, by channel.</div>
-    </div>
   <aside class="notes">
-    Two things that are genuinely unique to Core Plan.
+    ONE — Signal Engineering. Verified subscription signals. Suppress fake trials. Send qualified conversions. Inject pLTV. Meta learns who pays.
 
-    ONE — Verified Subscription Signals. This is the big one. Right now your MMP sends every "Start Trial" to Meta. Meta thinks that's a good user. But 70% cancel in 24 hours. You're training Meta to find people who cancel.
+    Before: 1,000 trials, 50 paid. After: 700 trials, 70 paid. Same spend, double conversion.
 
-    We suppress fake trials, create qualified conversion events, and inject predicted LTV. Meta learns who actually pays.
+    TWO — Web+App. Full journey from browser to app subscriber. Your MMP misses the web side.
 
-    Before: 1,000 trials, 50 paid. After: 700 trials, 70 paid. Same spend, double the conversion.
+    THREE — Funnel Report. Other MMPs track events but don't give you a dedicated funnel visualization by channel.
 
-    TWO — Web + App. If your users find you on the web and convert in the app, your MMP misses half the journey. We don't.
-
-    Why can't other MMPs do this? They were built for gaming. Install, CPI, done. Subscription apps are fundamentally different.
-
-    [DIALOGUE:] "What event are you optimizing on in Meta right now? Start Trial? Purchase?"
+    [DIALOGUE:] "What event are you optimizing on in Meta right now?"
   </aside>
 </section>
 
 <!-- 5. PROOF -->
 <section data-background-color="#0c0a14">
-  <span class="pill pill-red"><span class="dot" style="background:var(--red)"></span>The Proof</span>
-  <h1>Your cheapest channel<br>might be your most expensive.</h1>
+  <span class="pill pill-red"><span class="dot" style="background:var(--red)"></span> The Proof</span>
+  <h1>Your cheapest channel might be<br>your most expensive.</h1>
   <p class="sub">Without full-funnel attribution, you're optimizing for the wrong metric.</p>
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; margin-top:32px;">
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:28px;">
     <div style="text-align:center;">
-      <div style="font-size:14px; font-weight:600; color:var(--text-3); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px;">What your MMP shows</div>
-      <div style="display:flex; align-items:flex-end; justify-content:center; gap:24px; height:120px;">
+      <div class="card-label" style="color:var(--text-3);">What your MMP shows</div>
+      <div style="display:flex; align-items:flex-end; justify-content:center; gap:20px; height:120px; margin-top:8px;">
         <div style="display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%;">
-          <div class="mono" style="font-size:16px; font-weight:600; color:var(--tiktok); margin-bottom:4px;">$1.90</div>
-          <div style="width:56px; height:50px; border-radius:6px 6px 0 0; background:var(--tiktok);"></div>
-          <div style="font-size:14px; font-weight:500; color:var(--tiktok); margin-top:4px;">TikTok</div>
+          <div class="mono" style="font-size:15px; font-weight:600; color:var(--tiktok); margin-bottom:4px;">$1.90</div>
+          <div style="width:52px; height:50px; border-radius:8px 8px 0 0; background:var(--tiktok);"></div>
+          <div style="font-size:13px; font-family:'Rubik',sans-serif; font-weight:500; color:var(--tiktok); margin-top:4px;">TikTok</div>
         </div>
         <div style="display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%;">
-          <div class="mono" style="font-size:16px; font-weight:600; color:var(--meta); margin-bottom:4px;">$3.20</div>
-          <div style="width:56px; height:80px; border-radius:6px 6px 0 0; background:var(--meta);"></div>
-          <div style="font-size:14px; font-weight:500; color:var(--meta); margin-top:4px;">Meta</div>
+          <div class="mono" style="font-size:15px; font-weight:600; color:var(--meta); margin-bottom:4px;">$3.20</div>
+          <div style="width:52px; height:80px; border-radius:8px 8px 0 0; background:var(--meta);"></div>
+          <div style="font-size:13px; font-family:'Rubik',sans-serif; font-weight:500; color:var(--meta); margin-top:4px;">Meta</div>
         </div>
       </div>
-      <div style="margin-top:8px; font-size:14px; font-weight:600; display:inline-block; padding:3px 12px; border-radius:100px; background:var(--red-soft); color:var(--red);">Cost per Install — TikTok "wins"</div>
+      <div style="margin-top:10px; font-size:13px; font-family:'Rubik',sans-serif; font-weight:600; display:inline-block; padding:4px 14px; border-radius:100px; background:var(--red-soft); color:var(--red);">Cost per Install — TikTok "wins"</div>
     </div>
     <div style="text-align:center;">
-      <div style="font-size:14px; font-weight:600; color:var(--green); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:12px;">What Core Plan shows</div>
-      <div style="display:flex; align-items:flex-end; justify-content:center; gap:24px; height:120px;">
+      <div class="card-label" style="color:var(--green);">What Core Plan shows</div>
+      <div style="display:flex; align-items:flex-end; justify-content:center; gap:20px; height:120px; margin-top:8px;">
         <div style="display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%;">
-          <div class="mono" style="font-size:16px; font-weight:600; color:var(--red); margin-bottom:4px;">$452</div>
-          <div style="width:56px; height:120px; border-radius:6px 6px 0 0; background:var(--red);"></div>
-          <div style="font-size:14px; font-weight:500; color:var(--tiktok); margin-top:4px;">TikTok</div>
+          <div class="mono" style="font-size:15px; font-weight:600; color:var(--red); margin-bottom:4px;">$452</div>
+          <div style="width:52px; height:120px; border-radius:8px 8px 0 0; background:var(--red);"></div>
+          <div style="font-size:13px; font-family:'Rubik',sans-serif; font-weight:500; color:var(--tiktok); margin-top:4px;">TikTok</div>
         </div>
         <div style="display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%;">
-          <div class="mono" style="font-size:16px; font-weight:600; color:var(--green); margin-bottom:4px;">$383</div>
-          <div style="width:56px; height:60px; border-radius:6px 6px 0 0; background:var(--green);"></div>
-          <div style="font-size:14px; font-weight:500; color:var(--meta); margin-top:4px;">Meta</div>
+          <div class="mono" style="font-size:15px; font-weight:600; color:var(--green); margin-bottom:4px;">$383</div>
+          <div style="width:52px; height:60px; border-radius:8px 8px 0 0; background:var(--green);"></div>
+          <div style="font-size:13px; font-family:'Rubik',sans-serif; font-weight:500; color:var(--meta); margin-top:4px;">Meta</div>
         </div>
       </div>
-      <div style="margin-top:8px; font-size:14px; font-weight:600; display:inline-block; padding:3px 12px; border-radius:100px; background:var(--green-soft); color:var(--green);">Cost per Subscriber — Meta wins by 18%</div>
+      <div style="margin-top:10px; font-size:13px; font-family:'Rubik',sans-serif; font-weight:600; display:inline-block; padding:4px 14px; border-radius:100px; background:var(--green-soft); color:var(--green);">Cost per Subscriber — Meta wins by 18%</div>
     </div>
   </div>
   <div class="source">Health &amp; Fitness benchmark — RevenueCat State of Subscription Apps 2026</div>
   <aside class="notes">
-    Here's why this matters.
+    Left: your MMP today. CPI. TikTok $1.90, Meta $3.20. Scale TikTok, right?
 
-    Left side: what your MMP shows you today. Cost per install. TikTok is $1.90, Meta is $3.20. Every dashboard says scale TikTok.
+    Right: Core Plan. Cost per SUBSCRIBER. TikTok $452. Meta $383. Meta is 18% cheaper.
 
-    Right side: what Core Plan shows you. Cost per SUBSCRIBER — following the full funnel from install to trial to paid. TikTok: $452 per subscriber. Meta: $383. Meta is actually 18% cheaper.
+    Bars flip. You only see this with verified subscription signals + full-funnel attribution.
 
-    The bars flip. You can only see this with verified subscription signals and full-funnel attribution. That's what Core Plan gives you.
-
-    [DIALOGUE:] "Are you running TikTok? Because I see this pattern in almost every subscription app."
-
-    Source: RevenueCat SOSA 2026, Health & Fitness.
+    [DIALOGUE:] "Running TikTok? I see this in almost every subscription app."
   </aside>
 </section>
 
 <!-- 6. NEXT STEP -->
 <section data-background-color="#0c0a14">
-  <span class="pill pill-green"><span class="dot" style="background:var(--green)"></span>Next Step</span>
+  <span class="pill pill-green"><span class="dot" style="background:var(--green)"></span> Next Step</span>
   <h1>Free to start. Docs at your desk<br><span style="color:var(--green)">tomorrow morning.</span></h1>
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:24px;">
-    <div class="glass" style="padding:28px; border: 2px solid rgba(93,232,176,0.25);">
-      <div style="font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--green);">Free to start</div>
-      <div class="mono" style="font-size:42px; font-weight:700; margin-top:4px;">15,000</div>
-      <div style="font-size:16px; color:var(--text-2); margin-top:4px;">attributed installs free</div>
-      <hr style="border:none; border-top:1px solid var(--glass-border); margin:12px 0;">
-      <div style="font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--green);">After that</div>
-      <div class="mono" style="font-size:42px; font-weight:700; margin-top:4px;">$0.05</div>
-      <div style="font-size:16px; color:var(--text-2); margin-top:4px;">per install &bull; Monthly &bull; Cancel anytime</div>
-      <hr style="border:none; border-top:1px solid var(--glass-border); margin:12px 0;">
-      <div style="font-size:15px; color:var(--text-2); line-height:1.8;">
-        &#10003; RevenueCat &bull; Adapty &bull; Superwall<br>
-        &#10003; Meta Ads &bull; Google Ads &bull; TikTok Ads &bull; Apple Search Ads
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:24px;">
+    <div class="glass" style="padding:26px; border-color:rgba(93,232,176,0.2);">
+      <div class="card-label" style="color:var(--green);">Free to start</div>
+      <div class="stat-big">15,000</div>
+      <div style="font-size:15px; font-family:'Rubik',sans-serif; color:var(--text-2); margin-top:4px;">attributed installs free</div>
+      <hr style="border:none; border-top:1px solid var(--glass-border); margin:14px 0;">
+      <div class="card-label" style="color:var(--green);">After that</div>
+      <div class="stat-big">$0.05</div>
+      <div style="font-size:15px; font-family:'Rubik',sans-serif; color:var(--text-2); margin-top:4px;">per install · Monthly · Cancel anytime</div>
+      <hr style="border:none; border-top:1px solid var(--glass-border); margin:14px 0;">
+      <div style="font-size:14px; font-family:'Rubik',sans-serif; color:var(--text-2); line-height:1.8;">
+        RevenueCat · Adapty · Superwall<br>
+        Meta Ads · Google Ads · TikTok Ads · Apple Search Ads
       </div>
     </div>
-    <div class="glass" style="padding:28px; text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-      <div class="pill pill-blue"><span class="dot" style="background:var(--blue)"></span>Limited Beta</div>
-      <div style="font-size:24px; font-weight:600; margin:8px 0 4px;">Drop your email.</div>
-      <div style="font-size:18px; color:var(--text-2); margin-bottom:16px; line-height:1.5;">Setup guide + category benchmark<br>in your inbox <strong style="color:var(--text)">tomorrow morning</strong>.</div>
-      <div style="width:110px; height:110px; border:2px dashed rgba(255,255,255,0.1); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:13px; color:var(--text-3); background:rgba(0,0,0,0.3);">QR &rarr; Google Form</div>
-      <div class="mono" style="font-size:13px; color:var(--blue); margin-top:8px;">forms.gle/xxxxx</div>
-      <div style="margin-top:12px; padding:6px 14px; border-radius:100px; background:var(--green-soft); font-size:14px; color:var(--green); font-weight:500;">15K free installs &bull; First insight in a week</div>
+    <div class="glass" style="padding:26px; text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+      <div class="pill pill-blue"><span class="dot" style="background:var(--blue)"></span> Limited Beta</div>
+      <div style="font-size:22px; font-weight:600; margin:8px 0 6px;">Drop your email.</div>
+      <div style="font-size:16px; font-family:'Rubik',sans-serif; color:var(--text-2); margin-bottom:16px; line-height:1.5;">Setup guide + category benchmark<br>in your inbox <strong style="color:var(--text)">tomorrow morning</strong>.</div>
+      <div style="width:110px; height:110px; border:2px dashed rgba(255,255,255,0.08); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:12px; font-family:'Rubik',sans-serif; color:var(--text-3); background:rgba(0,0,0,0.2);">QR → Google Form</div>
+      <div class="mono" style="font-size:12px; color:var(--blue); margin-top:8px;">forms.gle/xxxxx</div>
+      <div style="margin-top:14px; padding:6px 14px; border-radius:100px; background:var(--green-soft); border:1px solid rgba(93,232,176,0.12); font-size:13px; font-family:'Rubik',sans-serif; color:var(--green); font-weight:500;">15K free installs · First insight in a week</div>
     </div>
   </div>
   <aside class="notes">
-    Simple pricing. Free for your first year — up to 15K installs or 1.5M data points. After that, 5 cents per install. Monthly. Cancel anytime.
+    Free first year — 15K installs or 1.5M data points. Then $0.05/install. Monthly. Cancel anytime.
 
-    Native integrations: RevenueCat, Adapty, Superwall webhooks. All four major ad platforms: Meta Ads, Google Ads, TikTok Ads, Apple Search Ads.
+    RevenueCat, Adapty, Superwall. Meta Ads, Google Ads, TikTok Ads, Apple Search Ads.
 
-    [QR] Scan, drop your email. Tomorrow morning: setup guide and your category's benchmarks.
+    [QR] Scan, drop email. Tomorrow: setup guide + benchmarks.
 
-    [CLOSING:] "I'm around all evening. I can pull up your category's benchmarks on my phone right now — takes 30 seconds."
+    [CLOSING:] "I can show your category benchmarks on my phone — 30 seconds."
   </aside>
 </section>
 
